@@ -74,15 +74,21 @@ const MobileIcon = styled.div`
   `;
 
   const NavLink = styled.a`
-  color: ${({ theme}) => theme.text_primary};
+  color: ${({ theme }) => theme.text_primary};
   font-weight: 500;
+  font-size: 20px;
   cursor: pointer;
   text-decoration: none;
-  transition: all 0.2s ease-in-out;
+  transition: color 0.3s ease-in-out;
+
   &:hover {
-    color: ${({ theme}) => theme.text_primary};
+    color: ${({ theme }) => theme.primary}; /* Change to primary color on hover */
   }
-  `;
+
+  &:active {
+    color: ${({ theme }) => theme.activeColor}; /* Optional: color change on click */
+  }
+`;
 
   const ButtonContainer = styled.div`
   dispplay: flex;
@@ -144,6 +150,7 @@ const MobileIcon = styled.div`
   const MobileMenuLinks = styled(LinkR)`
    color:${({ theme}) => theme.text_primary};
    font-weight: 500;
+   font-size: 18px;
    cursor: pointer;
    text-direction: none;
    transition: all 0.2s ease in-out;
